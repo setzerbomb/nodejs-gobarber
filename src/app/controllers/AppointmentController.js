@@ -21,7 +21,7 @@ class AppointmentController {
                 moment(parseInt(Date.now()))
                   .startOf('day')
                   .format(),
-                moment(parseInt(1571047795861))
+                moment(parseInt(Date.now()))
                   .endOf('day')
                   .format()
               ]
