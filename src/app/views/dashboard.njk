@@ -17,6 +17,9 @@
           </li>
         {% endfor %}
       </ul>
+      {% if user.provider === true %}
+        <a href="/app/appointments/list/{{ user.id }}" class="isProvider">Lista de Reservas</a>
+      {% endif %}
       <a href="/app/logout" class="logout">Sair</a>
     </div>
 

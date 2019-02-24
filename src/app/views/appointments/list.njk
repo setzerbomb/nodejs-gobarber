@@ -1,0 +1,30 @@
+{% extends "_layouts/auth.njk" %}
+
+{% block main %}
+  <div class="main-wrapper">
+    <div class="content">
+      <div class="provider">
+          <img src="/files/{{ user.avatar }}"/>
+          <strong>{{ user.name }}</strong>
+      </div>
+      <strong> Seus compromissos como barbeiro</strong>
+
+      <div class="providers">
+        <div>
+          <ul class="providers">
+            {% for appointment in appointments %}
+              <li class="provider">
+                <div>
+                  <img src="/files/{{ appointment.client.avatar }}"/>
+                  <strong>{{ appointment.client.name }}</strong>
+                  <strong>{{ appointment.date }}</strong>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        <div
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
